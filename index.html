@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Countdown & Poem</title>
+<style>
+body {
+margin: 0;
+padding: 0;
+background: linear-gradient(135deg, #fefefe 60%, #f5d0d0 100%);
+font-family: Cinzel, serif;
+color: #333;
+height: 100vh;
+overflow-y: auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 2rem;
+}
+
+#countdown {
+font-size: 3rem;
+font-weight: bold;
+cursor: pointer;
+transition: opacity 1s ease;
+margin-top: 2rem;
+}
+
+#poem {
+opacity: 0;
+max-width: 800px;
+font-size: 1.1rem;
+line-height: 1.6;
+color: #442222;
+margin-top: 2rem;
+text-align: left;
+transition: opacity 2s ease;
+}
+
+#poem p {
+margin-bottom: 1rem;
+}
+</style>
+</head>
+<body>
+
+<div id="countdown" title="Click to reveal the poem">Loading countdown...</div>
+
+<div id="poem" aria-live="polite" role="region" aria-hidden="true">
+<p><strong>Life begins with a death. </strong><br/>By Sirène</p>
+
+<p>my teeth are rotting<br>
+yellowing in quiet betrayal,<br>
+slowly aching like a truth I can’t unspeak<br>
+until I reach in with trembling fingers<br>
+and pluck them out,<br>
+one by one.<br>
+he hides behind them,<br>
+so I tear my mouth apart<br>
+to dig him out.</p>
+
+<p>I reach into myself,<br>
+past lips peeled back like<br>
+old wallpaper,<br>
+fingers fumbling<br>
+for truth<br>
+or a lie worth believing.<br>
+each tooth a monument to silence<br>
+he hides behind them,<br>
+so I rip,<br>
+I rip<br>
+until blood slicks the floor like apologies<br>
+and he is nowhere.</p>
+
+<p>I miss him<br>
+with a craving that bleeds.<br>
+so I cut the tongue<br>
+its root, its reverence,<br>
+
+its taste for remembering.</p>
+
+<p>I reach<br>
+so I tie my hands in bows<br>
+for no one,<br>
+wrap them tight in the quiet<br>
+of restraint,<br>
+until skin forgets<br>
+what reaching ever felt like.</p>
+
+<p>I feel him<br>
+in the hush of my blood,<br>
+so I slice it open<br>
+and drain the wound dry,<br>
+trying to find the part of me<br>
+he clings to.</p>
+
+<p>he lives<br>
+in the marrow of my thoughts,<br>
+a name echoing like a church bell<br>
+in a town that has long since been burned.<br>
+a text I’ve memorized<br>
+like scripture<br>
+word for word,<br>
+a religion I bleed for.</p>
+
+<p>in hopes he’ll spill out<br>
+with the rest of the things I’ve tried to love.<br>
+I cannot scrape him clean:<br>
+the between-space,<br>
+the under-rib,<br>
+the place soul and shadow kiss.<br>
+his name echoes<br>
+it colonizes.<br>
+it drips<br>
+off the edges of every hour,<br>
+like water leaking from a ceiling I’ve stopped fixing.</p>
+
+<p>my wrists burn like altars.<br>
+I offer up the pain like prayer,<br>
+and smile<br>
+and talk<br>
+and talk<br>
+and talk<br>
+to people I am already leaving.<br>
+I pack bags in my head<br>
+while they speak.<br>
+because truth is guillotine.<br>
+and authenticity<br>
+a loaded gun.</p>
+
+<p>I am a coward<br>
+with a calendar.<br>
+I’ve picked the date.<br>
+I know how this ends.</p>
+
+<p>Yet<br>
+ I dream anyway<br>
+his children,<br>
+what color eyes<br>
+they might be<br>
+if they blinked in the sun and<br>
+called someone else<br>
+Mom.</p>
+
+<p>I kill the woman he loves.<br>
+Every night.<br>
+Over and over.<br>
+I peel her like fruit,<br>
+climb inside,<br>
+wear her skin<br>
+until I forget<br>
+where she ends<br>
+and I begin.<br>
+I cannot let her smile.<br>
+I cannot let her have what I could not hold.</p>
+
+<p>I need to be sad.<br>
+Because joy is a drug with withdrawal.<br>
+And I’ve overdosed<br>
+on too many daydreams.</p>
+
+<p>I am monstrous.<br>
+I must be.<br>
+I need sadness<br>
+like oxygen,<br>
+because happiness<br>
+hurts more<br>
+when it leaves.</p>
+
+<p>I lie,<br>
+because lies are fences,<br>
+and the truth is too wild<br>
+to be held.</p>
+
+<p>I stay sad.<br>
+it’s familiar.<br>
+it’s home.<br>
+it’s the room I keep boarded shut<br>
+but never leave.</p>
+
+<p>you were the pulse in my life.<br>
+I still mouth your name<br>
+like it’s holy.<br>
+I still pretend<br>
+you’re not everything.</p>
+
+
+<p>because the truth would unmake me,<br>
+tear through the sinew of who I am<br>
+and leave nothing that could be known<br>
+as me.</p>
+
+<p>I cannot move on.<br>
+You were the ink in my veins.<br>
+Now I just bleed<br>
+alphabet.<br>
+I think about you<br>
+every hour I pretend I don’t.</p>
+
+<p>I will die.<br>
+But not today.<br>
+Today,<br>
+I will dress the wound<br>
+like a lover.<br>
+I will smile into mirrors<br>
+I cannot look into.<br>
+I will write poems<br>
+I hope you never read.</p>
+
+<p>I will not die today.<br>
+but I’ve written it in ink<br>
+in places I won’t show.</p>
+
+<p>and if life doesn’t kill me<br>
+love will.</p>
+<p>and if life doesn’t kill me<br>
+  I will.</p>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+const countdown = document.getElementById("countdown");
+const poem = document.getElementById("poem");
+
+let savedTarget = localStorage.getItem("countdownTarget");
+let targetDate;
+
+if (savedTarget) {
+targetDate = new Date(savedTarget);
+} else {
+targetDate = new Date();
+targetDate.setFullYear(targetDate.getFullYear() + 5);
+localStorage.setItem("countdownTarget", targetDate.toISOString());
+}
+
+function updateCountdown() {
+const now = new Date();
+const diff = targetDate - now;
+
+if (diff <= 0) {
+countdown.textContent = "0 hours";
+return;
+}
+
+const totalSeconds = Math.floor(diff / 1000);
+const days = Math.floor(totalSeconds / (3600 * 24));
+const hours = Math.floor((totalSeconds % (3600 * 24)) / 3600);
+const minutes = Math.floor((totalSeconds % 3600) / 60);
+const seconds = totalSeconds % 60;
+
+countdown.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+countdown.addEventListener("click", () => {
+countdown.style.opacity = "0";
+setTimeout(() => {
+countdown.style.display = "none";
+poem.style.opacity = "1";
+}, 1000);
+});
+});
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
