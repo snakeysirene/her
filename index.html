@@ -27,7 +27,7 @@ transition: opacity 1s ease;
 margin-top: 2rem;
 }
 
-#poem {
+#poem, #new-poem {
 opacity: 0;
 max-width: 800px;
 font-size: 1.1rem;
@@ -38,8 +38,15 @@ text-align: left;
 transition: opacity 2s ease;
 }
 
-#poem p {
+#poem p, #new-poem p {
 margin-bottom: 1rem;
+}
+
+.clickable {
+cursor: pointer;
+color: #aa3333;
+font-weight: bold;
+text-decoration: underline;
 }
 </style>
 </head>
@@ -77,7 +84,6 @@ and he is nowhere.</p>
 with a craving that bleeds.<br>
 so I cut the tongue<br>
 its root, its reverence,<br>
-
 its taste for remembering.</p>
 
 <p>I reach<br>
@@ -135,7 +141,7 @@ I’ve picked the date.<br>
 I know how this ends.</p>
 
 <p>Yet<br>
- I dream anyway<br>
+I dream anyway<br>
 his children,<br>
 what color eyes<br>
 they might be<br>
@@ -185,7 +191,6 @@ like it’s holy.<br>
 I still pretend<br>
 you’re not everything.</p>
 
-
 <p>because the truth would unmake me,<br>
 tear through the sinew of who I am<br>
 and leave nothing that could be known<br>
@@ -213,15 +218,70 @@ but I’ve written it in ink<br>
 in places I won’t show.</p>
 
 <p>and if life doesn’t kill me<br>
-love will.</p>
-<p>and if life doesn’t kill me<br>
-  I will.</p>
+<span id="revealNewPoem" class="clickable">I will.</span>
+</p>
+</div>
+
+<div id="new-poem" aria-live="polite" role="region" aria-hidden="true" style="display: none;">
+<p><strong>“i didn’t mean to love you”</strong><br/>By Sirène</p>
+
+<p>no, i didn’t mean to love you<br>
+you just felt like something i could survive in<br>
+like summer heat<br>
+like a cut that didn’t bleed right away</p>
+
+<p>i didn’t mean to love you<br>
+you were just there<br>
+and soft<br>
+and looking at me like i wasn’t a monster</p>
+
+<p>i didn’t mean to love you<br>
+but you smelled like oranges<br>
+and god<br>
+and something sharp<br>
+and i thought maybe<br>
+i could hold you<br>
+without breaking anything</p>
+
+<p>i didn’t mean to love you<br>
+i just wanted to be near the light<br>
+even if it burned<br>
+even if it made me ugly</p>
+
+<p>i didn’t mean to love you<br>
+but you kept saying my name<br>
+like it was a prayer<br>
+or a dare<br>
+and i got confused<br>
+i thought maybe<br>
+you meant it</p>
+
+<p>i didn’t mean to love you<br>
+so yeah, i was upset<br>
+when you laughed<br>
+and said<br>
+So much but nothing at all<br>
+like i hadn’t already carved your name<br>
+into the back of my teeth</p>
+
+<p>like i didn’t flinch every time<br>
+you touched me<br>
+and still<br>
+kept asking you to</p>
+
+<p>i didn’t mean to love you<br>
+so why does it still feel<br>
+like you left<br>
+with a piece<br>
+i never offered?</p>
 </div>
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
 const countdown = document.getElementById("countdown");
 const poem = document.getElementById("poem");
+const newPoem = document.getElementById("new-poem");
+const revealNewPoem = document.getElementById("revealNewPoem");
 
 let savedTarget = localStorage.getItem("countdownTarget");
 let targetDate;
@@ -261,6 +321,17 @@ setTimeout(() => {
 countdown.style.display = "none";
 poem.style.opacity = "1";
 }, 1000);
+});
+
+revealNewPoem.addEventListener("click", () => {
+poem.style.opacity = "0";
+setTimeout(() => {
+poem.style.display = "none";
+newPoem.style.display = "block";
+setTimeout(() => {
+newPoem.style.opacity = "1";
+}, 100);
+}, 1500);
 });
 });
 </script>
