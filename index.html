@@ -1,298 +1,954 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Countdown & Poem</title>
-<style>
-body {
-margin: 0;
-padding: 0;
-background: linear-gradient(135deg, #fefefe 60%, #f5d0d0 100%);
-font-family: Cinzel, serif;
-color: #333;
-height: 100vh;
-overflow-y: auto;
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 2rem;
-}
 
-#countdown {
-font-size: 3rem;
-font-weight: bold;
-cursor: pointer;
-transition: opacity 1s ease;
-margin-top: 2rem;
-}
+  <meta charset="UTF-8" />
 
-#poem, #new-poem {
-opacity: 0;
-max-width: 800px;
-font-size: 1.1rem;
-line-height: 1.6;
-color: #442222;
-margin-top: 2rem;
-text-align: left;
-transition: opacity 2s ease;
-}
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-#poem p, #new-poem p {
-margin-bottom: 1rem;
-}
+  <title>Countdown & Poem</title>
 
-.clickable {
-cursor: pointer;
-color: #aa3333;
-font-weight: bold;
-text-decoration: underline;
-}
-</style>
+  <style>
+
+    body {
+
+      margin: 0;
+
+      padding: 0;
+
+      background: linear-gradient(135deg, #fefefe 60%, #f5d0d0 100%);
+
+      font-family: Cinzel, serif;
+
+      color: #333;
+
+      height: 100vh;
+
+      overflow-y: auto;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      padding: 2rem;
+
+    }
+
+
+
+    #countdown {
+
+      font-size: 3rem;
+
+      font-weight: bold;
+
+      cursor: pointer;
+
+      transition: opacity 1s ease;
+
+      margin-top: 2rem;
+
+    }
+
+
+
+    #poem, #new-poem, #story {
+
+      opacity: 0;
+
+      max-width: 800px;
+
+      font-size: 1.1rem;
+
+      line-height: 1.6;
+
+      color: #442222;
+
+      margin-top: 2rem;
+
+      text-align: left;
+
+      transition: opacity 2s ease;
+
+    }
+
+
+
+    #poem p, #new-poem p, #story p {
+
+      margin-bottom: 1rem;
+
+    }
+
+
+
+    .clickable {
+
+      cursor: pointer;
+
+      color: #aa3333;
+
+      font-weight: bold;
+
+      text-decoration: underline;
+
+    }
+
+  </style>
+
 </head>
+
 <body>
+
+
 
 <div id="countdown" title="Click to reveal the poem">Loading countdown...</div>
 
+
+
 <div id="poem" aria-live="polite" role="region" aria-hidden="true">
-<p><strong>Life begins with a death. </strong><br/>By Sirène</p>
+
+  <p><strong>Life begins with a death. </strong><br/>By Sirène</p>
+
+
 
 <p>my teeth are rotting<br>
+
 yellowing in quiet betrayal,<br>
+
 slowly aching like a truth I can’t unspeak<br>
+
 until I reach in with trembling fingers<br>
+
 and pluck them out,<br>
+
 one by one.<br>
+
 he hides behind them,<br>
+
 so I tear my mouth apart<br>
+
 to dig him out.</p>
 
+
+
 <p>I reach into myself,<br>
+
 past lips peeled back like<br>
+
 old wallpaper,<br>
+
 fingers fumbling<br>
+
 for truth<br>
+
 or a lie worth believing.<br>
+
 each tooth a monument to silence<br>
+
 he hides behind them,<br>
+
 so I rip,<br>
+
 I rip<br>
+
 until blood slicks the floor like apologies<br>
+
 and he is nowhere.</p>
 
+
+
 <p>I miss him<br>
+
 with a craving that bleeds.<br>
+
 so I cut the tongue<br>
+
 its root, its reverence,<br>
+
 its taste for remembering.</p>
 
+
+
 <p>I reach<br>
+
 so I tie my hands in bows<br>
+
 for no one,<br>
+
 wrap them tight in the quiet<br>
+
 of restraint,<br>
+
 until skin forgets<br>
+
 what reaching ever felt like.</p>
 
+
+
 <p>I feel him<br>
+
 in the hush of my blood,<br>
+
 so I slice it open<br>
+
 and drain the wound dry,<br>
+
 trying to find the part of me<br>
+
 he clings to.</p>
 
+
+
 <p>he lives<br>
+
 in the marrow of my thoughts,<br>
+
 a name echoing like a church bell<br>
+
 in a town that has long since been burned.<br>
+
 a text I’ve memorized<br>
+
 like scripture<br>
+
 word for word,<br>
+
 a religion I bleed for.</p>
 
+
+
 <p>in hopes he’ll spill out<br>
+
 with the rest of the things I’ve tried to love.<br>
+
 I cannot scrape him clean:<br>
+
 the between-space,<br>
+
 the under-rib,<br>
+
 the place soul and shadow kiss.<br>
+
 his name echoes<br>
+
 it colonizes.<br>
+
 it drips<br>
+
 off the edges of every hour,<br>
+
 like water leaking from a ceiling I’ve stopped fixing.</p>
 
+
+
 <p>my wrists burn like altars.<br>
+
 I offer up the pain like prayer,<br>
+
 and smile<br>
+
 and talk<br>
+
 and talk<br>
+
 and talk<br>
+
 to people I am already leaving.<br>
+
 I pack bags in my head<br>
+
 while they speak.<br>
+
 because truth is guillotine.<br>
+
 and authenticity<br>
+
 a loaded gun.</p>
 
+
+
 <p>I am a coward<br>
+
 with a calendar.<br>
+
 I’ve picked the date.<br>
+
 I know how this ends.</p>
 
+
+
 <p>Yet<br>
+
 I dream anyway<br>
+
 his children,<br>
+
 what color eyes<br>
+
 they might be<br>
+
 if they blinked in the sun and<br>
+
 called someone else<br>
+
 Mom.</p>
 
+
+
 <p>I kill the woman he loves.<br>
+
 Every night.<br>
+
 Over and over.<br>
+
 I peel her like fruit,<br>
+
 climb inside,<br>
+
 wear her skin<br>
+
 until I forget<br>
+
 where she ends<br>
+
 and I begin.<br>
+
 I cannot let her smile.<br>
+
 I cannot let her have what I could not hold.</p>
 
+
+
 <p>I need to be sad.<br>
+
 Because joy is a drug with withdrawal.<br>
+
 And I’ve overdosed<br>
+
 on too many daydreams.</p>
 
+
+
 <p>I am monstrous.<br>
+
 I must be.<br>
+
 I need sadness<br>
+
 like oxygen,<br>
+
 because happiness<br>
+
 hurts more<br>
+
 when it leaves.</p>
 
+
+
 <p>I lie,<br>
+
 because lies are fences,<br>
+
 and the truth is too wild<br>
+
 to be held.</p>
 
+
+
 <p>I stay sad.<br>
+
 it’s familiar.<br>
+
 it’s home.<br>
+
 it’s the room I keep boarded shut<br>
+
 but never leave.</p>
 
+
+
 <p>you were the pulse in my life.<br>
+
 I still mouth your name<br>
+
 like it’s holy.<br>
+
 I still pretend<br>
+
 you’re not everything.</p>
 
+
+
 <p>because the truth would unmake me,<br>
+
 tear through the sinew of who I am<br>
+
 and leave nothing that could be known<br>
+
 as me.</p>
 
+
+
 <p>I cannot move on.<br>
+
 You were the ink in my veins.<br>
+
 Now I just bleed<br>
+
 alphabet.<br>
+
 I think about you<br>
+
 every hour I pretend I don’t.</p>
 
+
+
 <p>I will die.<br>
+
 But not today.<br>
+
 Today,<br>
+
 I will dress the wound<br>
+
 like a lover.<br>
+
 I will smile into mirrors<br>
+
 I cannot look into.<br>
+
 I will write poems<br>
+
 I hope you never read.</p>
 
+
+
 <p>I will not die today.<br>
+
 but I’ve written it in ink<br>
+
 in places I won’t show.</p>
 
+
+
 <p>and if life doesn’t kill me<br>
+
 <span id="revealNewPoem" class="clickable">I will.</span>
+
 </p>
+
 </div>
+
+
 
 <div id="new-poem" aria-live="polite" role="region" aria-hidden="true" style="display: none;">
-<p><strong>“i didn’t mean to love you”</strong><br/>By Sirène</p>
 
-<p>no, i didn’t mean to love you<br>
-you just felt like something i could survive in<br>
-like summer heat<br>
-like a cut that didn’t bleed right away</p>
+  <p><strong><span id="revealStory" class="clickable">“i didn’t mean to love you”</span></strong><br/>By Sirène</p>
 
-<p>i didn’t mean to love you<br>
-you were just there<br>
-and soft<br>
-and looking at me like i wasn’t a monster</p>
 
-<p>i didn’t mean to love you<br>
-but you smelled like oranges<br>
-and god<br>
-and something sharp<br>
-and i thought maybe<br>
-i could hold you<br>
-without breaking anything</p>
 
-<p>i didn’t mean to love you<br>
-i just wanted to be near the light<br>
-even if it burned<br>
-even if it made me ugly</p>
+  <p>no, i didn’t mean to love you<br>
 
-<p>i didn’t mean to love you<br>
-but you kept saying my name<br>
-like it was a prayer<br>
-or a dare<br>
-and i got confused<br>
-i thought maybe<br>
-you meant it</p>
+  you just felt like something i could survive in<br>
 
-<p>i didn’t mean to love you<br>
-so yeah, i was upset<br>
-when you laughed<br>
-and said<br>
-So much but nothing at all<br>
-like i hadn’t already carved your name<br>
-into the back of my teeth</p>
+  like summer heat<br>
 
-<p>like i didn’t flinch every time<br>
-you touched me<br>
-and still<br>
-kept asking you to</p>
+  like a cut that didn’t bleed right away</p>
 
-<p>i didn’t mean to love you<br>
-so why does it still feel<br>
-like you left<br>
-with a piece<br>
-i never offered?</p>
+
+
+  <p>i didn’t mean to love you<br>
+
+  you were just there<br>
+
+  and soft<br>
+
+  and looking at me like i wasn’t a monster</p>
+
+
+
+  <p>i didn’t mean to love you<br>
+
+  but you smelled like oranges<br>
+
+  and god<br>
+
+  and something sharp<br>
+
+  and i thought maybe<br>
+
+  i could hold you<br>
+
+  without breaking anything</p>
+
+
+
+  <p>i didn’t mean to love you<br>
+
+  i just wanted to be near the light<br>
+
+  even if it burned<br>
+
+  even if it made me ugly</p>
+
+
+
+  <p>i didn’t mean to love you<br>
+
+  but you kept saying my name<br>
+
+  like it was a prayer<br>
+
+  or a dare<br>
+
+  and i got confused<br>
+
+  i thought maybe<br>
+
+  you meant it</p>
+
+
+
+  <p>i didn’t mean to love you<br>
+
+  so yeah, i was upset<br>
+
+  when you laughed<br>
+
+  and said<br>
+
+  So much but nothing at all<br>
+
+  like i hadn’t already carved your name<br>
+
+  into the back of my teeth</p>
+
+
+
+  <p>like i didn’t flinch every time<br>
+
+  you touched me<br>
+
+  and still<br>
+
+  kept asking you to</p>
+
+
+
+  <p>i didn’t mean to love you<br>
+
+  so why does it still feel<br>
+
+  like you left<br>
+
+  with a piece<br>
+
+  i never offered?</p>
+
 </div>
 
+
+
+<div id="story" aria-live="polite" role="region" aria-hidden="true" style="display: none;">
+
+  <p><strong>“The Hole”</strong><br/>By Sirène</p>
+
+
+
+  <p>It was the kind of summer that stretched too long, feral and breathless, a season that stuck to the back of the teeth. The air didn’t move. The sky hung low like an accusation. Inside her room, the heat gathered like a secret, fermenting between her sheets, beneath her arms, under her tongue.</p>
+
+
+
+  <p>Everything peeled: the paint, the days, the skin from her fingertips. She’d sit on the edge of her bed and flake herself apart, as if she could shed her way into a new shape. One that didn’t tremble. One that didn’t feel like a cracked glass full of ghosts.</p>
+
+
+
+  <p>She didn’t know when the idea came, only that it arrived clean and soft, like a prayer. A rope. A fan. A silence. She would leave this heat behind.</p>
+
+
+
+  <p>When the fan gave way and the rope slipped loose like a bad promise, she collapsed in a heap of sweat and linen and breath. Her knees bruised. Her ribs stung. But she was still here.</p>
+
+
+
+  <p>And the house—the house had changed.</p>
+
+
+
+  <p>The wall near her bed looked different. The wooden slats near the floor were ajar, shifted, as if the house itself had exhaled and revealed a mouth.</p>
+
+
+
+  <p>She didn’t remember a crawl space.</p>
+
+
+
+  <p>She crawled inside it anyway, knees catching on splinters, palms grinding into dust and old spiderwebs. The air inside was cool and damp, like the inside of a tomb. There was the smell of mildew and copper. Her breathing echoed.</p>
+
+
+
+  <p>And then at the very back of the crawl was a hole.</p>
+
+
+
+  <p>Small, deliberate. Not accidental. Something bored with care, circular and perfect. Just big enough to press an eye to.</p>
+
+
+
+  <p>She did.</p>
+
+
+
+  <p>And saw him.</p>
+
+
+
+  <p>He sat in a room bathed in gold, backlit by a small desk lamp, his head bowed like he was praying. A boy. Pale hands. A dark halo of hair curling toward his cheek. He was writing. Always writing.</p>
+
+
+
+  <p>She watched him for hours.</p>
+
+
+
+  <p>Then days.</p>
+
+
+
+  <p>He never turned, never looked. But he was alive in ways she wasn’t. He drank orange juice in the morning, his throat pulsing as he swallowed. He played records. He read books with the spines cracked open like ribs. He scratched his shoulder when he was nervous. He smiled, once, at nothing.</p>
+
+
+
+  <p>She began peeling the wood around the hole.</p>
+
+
+
+  <p>Not to make it bigger. Not yet. Just to feel it splinter under her nails. There was something holy about it. The act. The boy. The seeing. She no longer felt like a girl, or even a self. She became an eye. A watcher. An angel without the wings. Without the mercy.</p>
+
+
+
+  <p>He became her scripture. Her devotion. Her god.</p>
+
+
+
+  <p>And yet there was nothing carnal in it. Not really.</p>
+
+
+
+  <p>She didn’t want to touch him. Not in the crude, obvious way. She wanted to inhabit him. To be the thoughts that moved behind his face. To sit in the cavern of his skull like a cathedral and light candles in his synapses. She wanted to nest inside him not to consume, but to belong.</p>
+
+
+
+  <p>A communion of being.</p>
+
+
+
+  <p>She whispered to the hole.</p>
+
+
+
+  <p>Words she didn’t understand. Verses that weren’t in any Bible. Her lips bled from pressing too hard against the wood. Her hands blistered from peeling it. Her voice grew hoarse, but she kept speaking. “Let me in,” she murmured. “Let me be your silence. Let me be the air in your lungs.”</p>
+
+
+
+  <p>He never heard her.</p>
+
+
+
+  <p>Until the night he did.</p>
+
+
+
+  <p>Or no. Not heard. Looked.</p>
+
+
+
+  <p>Because one night, as she pressed her full face to the widened hole he looked up. Looked directly at her.</p>
+
+
+
+  <p>Not startled. Not angry.</p>
+
+
+
+  <p>Just calm.</p>
+
+
+
+  <p>Like he’d known all along.</p>
+
+
+
+  <p>Her breath stopped.</p>
+
+
+
+  <p>He raised his hand and touched something on his side of the wall. Then blinked. Slowly. Reverently.</p>
+
+
+
+  <p>And when he blinked, she felt it in her own body. As though their eyes were not separate, but part of the same soul. As though the wall between them was not wood, but a membrane.</p>
+
+
+
+  <p>She sobbed.</p>
+
+
+
+  <p>She pressed herself deeper into the crawl space, her spine scraping the beams. Her knees raw. She was shaking now, all over, but not from fear. From knowing.</p>
+
+
+
+  <p>She was getting closer. The wall would dissolve. She would not climb through it—not like an animal. She would unmake it, slowly, cell by cell, until their rooms collapsed into each other. Until she was thought and he was breath and nothing was apart anymore.</p>
+
+
+
+  <p>She dreamed of him that night—not of his body, but of his absence. A dream where she looked through the hole and saw only a mirror.</p>
+
+
+
+  <p>She woke crying.</p>
+
+
+
+  <p>She whispered, “Please still be there.”</p>
+
+
+
+  <p>She looked.</p>
+
+
+
+  <p>And he was there. Writing. Breathing. Smiling at the nothing again.</p>
+
+
+
+  <p>But something had shifted. His desk was different. His books were different. His hair was a little longer.</p>
+
+
+
+  <p>Or had he always looked like that?</p>
+
+
+
+  <p>She blinked.</p>
+
+
+
+  <p>The room across the hole was no longer lit.</p>
+
+
+
+  <p>But she could still see him.</p>
+
+
+
+  <p>Because the light was coming from inside her own crawlspace.</p>
+
+
+
+  <p>She turned.</p>
+
+
+
+  <p>There was no lamp.</p>
+
+
+
+  <p>No bulb.</p>
+
+
+
+  <p>Just the soft illumination of something ancient, pressing out from her chest like a sun.</p>
+
+
+
+  <p>She looked back through the hole and the room was empty.</p>
+
+
+
+  <p>Not abandoned. Just never there.</p>
+
+
+
+  <p>There had never been a boy.</p>
+
+
+
+  <p>Only the idea of him. The need.</p>
+
+
+
+  <p>The god she carved from absence.</p>
+
+
+
+  <p>She curled into herself then, the wood of the crawl pressing against her temple like the palm of something divine. She smiled, small and broken.</p>
+
+
+
+  <p>And whispered, “Amen.”</p>
+
+</div>
+
+
+
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-const countdown = document.getElementById("countdown");
-const poem = document.getElementById("poem");
-const newPoem = document.getElementById("new-poem");
-const revealNewPoem = document.getElementById("revealNewPoem");
 
-let savedTarget = localStorage.getItem("countdownTarget");
-let targetDate;
+  document.addEventListener('DOMContentLoaded', () => {
 
-if (savedTarget) {
-targetDate = new Date(savedTarget);
-} else {
-targetDate = new Date();
-targetDate.setFullYear(targetDate.getFullYear() + 5);
-localStorage.setItem("countdownTarget", targetDate.toISOString());
-}
+    const countdown = document.getElementById("countdown");
+
+    const poem = document.getElementById("poem");
+
+    const newPoem = document.getElementById("new-poem");
+
+    const story = document.getElementById("story");
+
+    const revealNewPoem = document.getElementById("revealNewPoem");
+
+    const revealStory = document.getElementById("revealStory");
+
+
+
+    let savedTarget = localStorage.getItem("countdownTarget");
+
+    let targetDate;
+
+
+
+    if (savedTarget) {
+
+      targetDate = new Date(savedTarget);
+
+    } else {
+
+      targetDate = new Date();
+
+      targetDate.setFullYear(targetDate.getFullYear() + 5);
+
+      localStorage.setItem("countdownTarget", targetDate.toISOString());
+
+    }
+
+
+
+    function updateCountdown() {
+
+      const now = new Date();
+
+      const diff = targetDate - now;
+
+
+
+      if (diff <= 0) {
+
+        countdown.textContent = "0 hours";
+
+        return;
+
+      }
+
+
+
+      const totalSeconds = Math.floor(diff / 1000);
+
+      const days = Math.floor(totalSeconds / (3600 * 24));
+
+      const hours = Math.floor((totalSeconds % (3600 * 24)) / 3600);
+
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+
+      const seconds = totalSeconds % 60;
+
+
+
+      countdown.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+    }
+
+
+
+    updateCountdown();
+
+    setInterval(updateCountdown, 1000);
+
+
+
+    countdown.addEventListener("click", () => {
+
+      countdown.style.opacity = "0";
+
+      setTimeout(() => {
+
+        countdown.style.display = "none";
+
+        poem.style.opacity = "1";
+
+      }, 1000);
+
+    });
+
+
+
+    revealNewPoem.addEventListener("click", () => {
+
+      poem.style.opacity = "0";
+
+      setTimeout(() => {
+
+        poem.style.display = "none";
+
+        newPoem.style.display = "block";
+
+        setTimeout(() => {
+
+          newPoem.style.opacity = "1";
+
+        }, 100);
+
+      }, 1500);
+
+    });
+
+
+
+    revealStory.addEventListener("click", () => {
+
+      newPoem.style.opacity = "0";
+
+      setTimeout(() => {
+
+        newPoem.style.display = "none";
+
+        story.style.display = "block";
+
+        setTimeout(() => {
+
+          story.style.opacity = "1";
+
+          story.scrollIntoView({ behavior: 'smooth' });
+
+        }, 100);
+
+      }, 1500);
+
+    });
+
+  });
+
+</script>
+
+
+
+</body>
+
+</html>
 
 function updateCountdown() {
 const now = new Date();
